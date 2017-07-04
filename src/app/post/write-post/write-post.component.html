@@ -1,0 +1,22 @@
+<div class="write-post-container" [@flyIn]="active">
+  <div class="row">
+    <div class="col-sm-12">
+      <form role="form">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="标题，2到12个字符">
+        </div>
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="原文URL，如果是转载请粘贴，最长1024个字符">
+        </div>
+        <div class="form-group">
+          <textarea  id="post_editor" cols="30" rows="20" placeholder=""></textarea>
+          <iframe  frameborder="0" id="form_target" name="form_target" style="disnplay:none"></iframe>
+          <form id="file_upload_fom" target="form_target" method="post" enctype="multipart/form-data"  style="width:0px; height:0px;overflow:hidden">
+            <input type="text" id="img_input" name="image" type="file" (change)="fileInputChangeHandler()">
+          </form>
+        </div>
+        <button type="submit" class="btn btn-success">提交</button>
+      </form>
+    </div>
+  </div>
+</div>

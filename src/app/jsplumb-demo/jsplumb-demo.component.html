@@ -1,0 +1,60 @@
+<progressbar [max]="max" [value]="dynamic">
+  <span style="color:white; white-space:nowrap;">{{dynamic}} / {{max}}</span>
+</progressbar>
+
+<small><em>No animation</em></small>
+<progressbar [animate]="false" [value]="dynamic" type="success"><b>{{dynamic}}%</b></progressbar>
+
+<small><em>Object (changes type based on value)</em></small>
+<progressbar class="progress-striped active" [value]="dynamic" [type]="type">
+  {{type}} <i *ngIf="showWarning">!!!Watch out !!!</i>
+</progressbar>
+
+<button type="button" class="btn btn-sm btn-primary" (click)="random()">随机</button>
+
+<hr/>
+
+<div>
+  <tabset>
+    <tab heading="Static title">Static content</tab>
+    <tab heading="Static Title 1">Static content 1</tab>
+    <tab heading="Static Title 2">Static content 2</tab>
+    <tab (select)="alertMe()">
+      <template tabHeading>
+        <i class="glyphicon glyphicon-bell"></i> Alert!
+      </template>
+      I've got an HTML heading, and a select callback. Pretty cool!
+    </tab>
+  </tabset>
+</div>
+
+<hr/>
+
+<button type="button" class="btn btn-default btn-secondary" type="button" class="btn btn-default btn-secondary"
+        tooltip="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."
+        placement="left">
+  左边的工具提示
+</button>
+<button type="button" class="btn btn-default btn-secondary"
+        tooltip="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."
+        placement="top">
+  上面的工具提示
+</button>
+<button type="button" class="btn btn-default btn-secondary"
+        tooltip="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."
+        placement="bottom">
+  下面的工具提示
+</button>
+<button type="button" class="btn btn-default btn-secondary"
+        tooltip="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."
+        placement="right">
+ 右边的工具提示
+</button>
+
+<hr/>
+<input type="text" [(ngModel)]="name" pInputText>
+<button type="button" pButton label="Click" icon="fa fa-check" (click)="onClick($event)"></button>
+
+<div>{{message}}</div>
+
+<hr/>

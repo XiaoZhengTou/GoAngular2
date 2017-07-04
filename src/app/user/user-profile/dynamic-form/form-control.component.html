@@ -1,10 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+<div [formGroup]="form">
+  <label class="col-sm-2 control-label">{{field.label}}</label>
+  <div class="col-sm-10">
+    <div [ngSwitch]="field.controlType">
+      <input [type]="field.type" class="form-control" *ngSwitchCase="'textbox'" value="{{field.value}}" [formControlName]="field.key"
+        placeholder="{{field.placeholder}}">
+      <textarea *ngSwitchCase="'textarea'" value="{{field.value}}" rows="{{field.rows}}" class="form-control" [formControlName]="field.key"
+        placeholder="{{field.placeholder}}">{{field.placeholder}}</textarea>
+      <img src="{{field.src}}" alt="" *ngSwitchCase="'image'">
+    </div>
+  </div>
+</div>
