@@ -13,17 +13,17 @@ NiceFish可以用来搭建个人Blog、微型SNS站点，或者用于学习Angul
 一起来玩儿吧！很好玩儿哦！
 
 用git克隆本项目，从命令行进入进入项目根目录，依次执行以下命令：
-npm i -g cnpm
-cnpm i -g @angular/cli
-cnpm install
-ng serve
+npm i -g cnpm <br/>
+cnpm i -g @angular/cli <br/>
+cnpm install <br/>
+ng serve <br/>
 
 如果之前装过angular-cli需要先卸载：npm uninstall -g angular-cli 如果之前装过@angular/cli需要先卸载：npm uninstall -g @angular/cli 如果你之前已经尝试安装过node模块，请把NiceFish根目录下的node_moduels目录删掉 然后依次执行以下命令：
-npm cache clean
-npm i -g cnpm
-cnpm i -g @angular/cli
-cnpm install
-ng serve
+npm cache clean <br/>
+npm i -g cnpm <br/>
+cnpm i -g @angular/cli <br/>
+cnpm install <br/>
+ng serve <br/>
 
 
 ## 开发服务器
