@@ -56,3 +56,4 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 要获得更多关于Angular CLI的帮助，请使用`ng help`或查看[Angular CLI README]（https://github.com/angular/angular-cli/blob/master/README.md）。
 >>>>>>> 91dfaf296e9b7a830ad305eb3613e8a54a28fcd5
 # Angular2Test
+# Angular2Test
